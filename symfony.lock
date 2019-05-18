@@ -73,6 +73,19 @@
             "./src/DataFixtures/AppFixtures.php"
         ]
     },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "1.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.2",
+            "ref": "c1431086fec31f17fbcfe6d6d7e92059458facc1"
+        },
+        "files": [
+            "./config/packages/doctrine_migrations.yaml",
+            "./src/Migrations/.gitignore"
+        ]
+    },
     "doctrine/event-manager": {
         "version": "v1.0.0"
     },
@@ -85,6 +98,9 @@
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
+    "doctrine/migrations": {
+        "version": "v2.0.2"
+    },
     "doctrine/orm": {
         "version": "v2.6.3"
     },
@@ -94,8 +110,14 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
+    "egulias/email-validator": {
+        "version": "2.1.7"
+    },
     "fig/link-util": {
         "version": "1.0.0"
+    },
+    "fzaninotto/faker": {
+        "version": "v1.8.0"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
@@ -115,6 +137,9 @@
             "./config/packages/lexik_jwt_authentication.yaml"
         ]
     },
+    "monolog/monolog": {
+        "version": "1.24.0"
+    },
     "namshi/jose": {
         "version": "7.2.3"
     },
@@ -132,6 +157,12 @@
     },
     "nikic/php-parser": {
         "version": "v4.2.1"
+    },
+    "ocramius/package-versions": {
+        "version": "1.4.0"
+    },
+    "ocramius/proxy-manager": {
+        "version": "2.1.1"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
@@ -156,6 +187,33 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "sensio/framework-extra-bundle": {
+        "version": "5.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "fb7e19da7f013d0d422fa9bce16f5c510e27609b"
+        },
+        "files": [
+            "./config/packages/sensio_framework_extra.yaml"
+        ]
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.2.1"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c82bead70f9a4f656354a193df7bf0ca2114efa0"
+        },
+        "files": [
+            "./public/.htaccess"
+        ]
     },
     "symfony/asset": {
         "version": "v4.2.8"
@@ -255,7 +313,33 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/monolog-bridge": {
+        "version": "v4.2.8"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.1",
+            "ref": "18ebf5a940573a20de06f9c4060101eeb438cf3d"
+        },
+        "files": [
+            "./config/packages/dev/monolog.yaml",
+            "./config/packages/prod/monolog.yaml",
+            "./config/packages/test/monolog.yaml"
+        ]
+    },
+    "symfony/orm-pack": {
+        "version": "v1.0.6"
+    },
+    "symfony/polyfill-intl-idn": {
+        "version": "v1.11.0"
+    },
     "symfony/polyfill-mbstring": {
+        "version": "v1.11.0"
+    },
+    "symfony/polyfill-php72": {
         "version": "v1.11.0"
     },
     "symfony/process": {
@@ -308,6 +392,39 @@
     },
     "symfony/serializer": {
         "version": "v4.2.8"
+    },
+    "symfony/serializer-pack": {
+        "version": "v1.0.2"
+    },
+    "symfony/stopwatch": {
+        "version": "v4.2.8"
+    },
+    "symfony/swiftmailer-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.5",
+            "ref": "3db029c03e452b4a23f7fc45cec7c922c2247eb8"
+        },
+        "files": [
+            "./config/packages/dev/swiftmailer.yaml",
+            "./config/packages/swiftmailer.yaml",
+            "./config/packages/test/swiftmailer.yaml"
+        ]
+    },
+    "symfony/translation": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "1fb02a6e1c8f3d4232cce485c9afa868d63b115a"
+        },
+        "files": [
+            "./config/packages/translation.yaml",
+            "./translations/.gitignore"
+        ]
     },
     "symfony/twig-bridge": {
         "version": "v4.2.8"
@@ -365,5 +482,11 @@
     },
     "willdurand/negotiation": {
         "version": "v2.3.1"
+    },
+    "zendframework/zend-code": {
+        "version": "3.3.1"
+    },
+    "zendframework/zend-eventmanager": {
+        "version": "3.2.1"
     }
 }

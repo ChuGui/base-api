@@ -2,7 +2,7 @@
 security:
     encoders:
         App\Entity\User:
-            algorithm: BCrypt
+            algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
@@ -10,7 +10,7 @@ security:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: email
+                property: username
 
     firewalls:
         dev:
@@ -22,7 +22,7 @@ security:
             provider: app_user_provider
             json_login:
                 check_path: /authentication_token
-                username_path: email
+                username_path: username
                 password_path: password
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
@@ -30,8 +30,3 @@ security:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
 
-    # Easy way to control access for large sections of your site
-    # Note: Only the *first* access control that matches will be used
-    access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
