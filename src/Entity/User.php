@@ -49,15 +49,19 @@ final class User implements JWTUserInterface
      * @param array $roles
      * @see UserInterface
      */
-    public function __construct($username, array $roles)
+    public function __construct()
     {
         $this->isActive = true;
-        $this->username = $username;
-        $this->roles = $roles;
     }
 
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
+    }
+
+    public function setUsername($username)
+    {
+        $this->username = $username;
     }
 
     public function getUsername()
@@ -84,6 +88,16 @@ final class User implements JWTUserInterface
     {
     }
 
+    public function addRoles(Array $roles)
+    {
+        $userRoles = $this->getRoles();
+        foreach ($roles as $role) {
+            if (!in_array($role, $userRoles )){
+                array_push($this->roles, $role);
+            }
+        }
+    }
+
     public function getRoles(): array
     {
         $roles = $this->roles;
@@ -96,7 +110,8 @@ final class User implements JWTUserInterface
         $this->email = $email;
     }
 
-    public function getEmail(){
+    public function getEmail()
+    {
         return $this->email;
     }
 
